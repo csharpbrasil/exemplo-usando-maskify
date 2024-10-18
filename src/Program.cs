@@ -17,6 +17,8 @@ class Program
         Console.WriteLine("| ------------------------------------------------------------");
         Exemplo5();
         Console.WriteLine("| ------------------------------------------------------------");
+        Exemplo6();
+        Console.WriteLine("| ------------------------------------------------------------");
     }
 
 
@@ -56,6 +58,14 @@ class Program
     {
         string dados = "Meus dados são confidenciais";
         string dadosMascarado = Masker.Mask(dados, 5, 9, '#');
+        Console.WriteLine($"| Original: {dados}");
+        Console.WriteLine($"| Mascarado: {dadosMascarado}");
+    }
+
+    static void Exemplo6()
+    {
+        string dados = "(11) 12345-1234";
+        string dadosMascarado = Masker.Mask(dados, 5, 8, '#');
         Console.WriteLine($"| Original: {dados}");
         Console.WriteLine($"| Mascarado: {dadosMascarado}");
     }
